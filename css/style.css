@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: rgb(97, 97, 255);
+}
+
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0 ,0 ,0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container.active .form{
+    height: 565px;
+}
+
+.container .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.container .form{
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width : 200%;
+    transition: height 0.2s ease;
+}
+
+.container .form-login{
+    width: 50%;
+    padding: 20px;
+    background: white;
+    transition: margin-left 0.2s ease, opacity 0.1s ease;
+}
+
+.container.active .login{
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    margin: -25%;
+}
+.container .login{
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+.container .register{
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+.container.active .register{
+    opacity: 1;
+    transition: opacity 0.1s ease;
+}
+
+.container .title::before{
+    position: absolute;
+    content: '';
+    left:25;
+    top: 30px;
+    height: 3px;
+    width: 30px;
+    background: blue;
+}
+
+.form .input-field{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+}
+
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    transition: all 0.2a ease;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: blue;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: blue;
+}
+
+.input-field i{
+    position: absolute;
+    translate: translateY(-50%);
+    font-size: 22px;
+    color: #999 ;
+}
+
+.input-field i.icon{
+    top:18%;
+    left:0;
+}
+
+.input-field i.eyes{
+    top:18%;
+    right: 0;
+    cursor: pointer;
+}
+
+.form .checkbox-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 5px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+    accent-color: blue;
+}
+
+#logCheck{
+    margin-right: 4px;
+}
+
+.checkText{
+    font-size: 14px;
+}
+
+.form a{
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    background: rgb(75, 75, 255);
+    color: white;
+    letter-spacing: 0.8px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form .button input:hover{
+    background: blue;
+}
+
+.sign-up{
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
